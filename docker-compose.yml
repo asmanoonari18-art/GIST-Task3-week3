@@ -1,0 +1,9 @@
+services:
+  dataflow-api:
+    build: .
+    container_name: dataflow-api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped
